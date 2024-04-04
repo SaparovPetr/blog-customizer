@@ -20,11 +20,11 @@ const App = () => {
 			className={clsx(styles.main)}
 			style={
 				{
-					'--font-family': defaultArticleState.fontFamilyOption.value,
-					'--font-size': defaultArticleState.fontSizeOption.value,
-					'--font-color': defaultArticleState.fontColor.value,
-					'--container-width': defaultArticleState.contentWidth.value,
-					'--bg-color': defaultArticleState.backgroundColor.value,
+					'--font-family': currientArticleState.fontFamilyOption.value,
+					'--font-size': currientArticleState.fontSizeOption.value,
+					'--font-color': currientArticleState.fontColor.value,
+					'--container-width': currientArticleState.contentWidth.value,
+					'--bg-color': currientArticleState.backgroundColor.value,
 				} as CSSProperties
 			}>
 			<ArticleParamsForm
