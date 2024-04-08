@@ -27,6 +27,7 @@ export const ArticleParamsForm = ({
 	currientArticleState,
 	setCurrientArticleState,
 }: ArticleParamsFormProps) => {
+	// const rootRef — это переменная, которая ссылается на элемент DOM (Document Object Model) в React-компоненте. В данном случае, rootRef ссылается на элемент aside
 	const rootRef = useRef<HTMLElement>(null);
 
 	// стейты
@@ -96,7 +97,9 @@ export const ArticleParamsForm = ({
 		<>
 			<ArrowButton onClick={formOpenHandler} isOpen={isOpenForm} />
 			<aside
+				/* Это атрибут ref, который связывает rootRef с элементом aside. После рендеринга компонента, rootRef.current будет указывать на этот элемент в DOM. В итоге, rootRef позволяет получить доступ к элементу aside в коде, например, для изменения его стилей или выполнения других операций с DOM. Это часто используется в React-компонентах для взаимодействия с элементами на странице. */
 				ref={rootRef}
+				/* Здесь мы применяем классы стилей к <aside>. Если isOpenForm равно true, то добавляется класс styles.container_open, иначе используется только styles.container. */
 				className={clsx(styles.container, isOpenForm && styles.container_open)}>
 				<form onSubmit={formSubmitHandler} className={styles.form}>
 					<Text weight={800} uppercase size={31}>

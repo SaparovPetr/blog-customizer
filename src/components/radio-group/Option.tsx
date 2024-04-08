@@ -9,7 +9,7 @@ type OptionProps = {
 	value: OptionType['value'];
 	title: OptionType['title'];
 	selected: OptionType;
-	groupName: string | undefined;
+	groupName: string;
 	onChange?: (option: OptionType) => void;
 	option: OptionType;
 };
